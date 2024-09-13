@@ -1,0 +1,107 @@
+/* static/css/styles.css */
+
+/* Estilos básicos para o corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #e2e2e2, #f8f9fa); /* Gradiente sutil de fundo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal para centralizar o conteúdo */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Cor de fundo mais suave para o container */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais suave e profunda */
+}
+
+/* Estilos para os formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+form button {
+    margin-top: 5px;
+    background: linear-gradient(45deg, #007bff, #00d084);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: linear-gradient(45deg, #0056b3, #00bfae);
+    transform: scale(1.05);
+}
+
+form button:active {
+    background: linear-gradient(45deg, #004494, #009d8a);
+    transform: scale(0.98);
+}
+
+/* Estilos para links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(40, 167, 69, 1) 100%);
+}
+
+.navbar-brand, .nav-link {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #d3d3d3;
+}
+
+/* Estilos para botões adicionais */
+.btn-custom {
+    background: linear-gradient(45deg, #6f42c1, #e83e8c);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(45deg, #5a2a8d, #d73a6c);
+    transform: scale(1.05);
+}
+
+.btn-custom:active {
+    background: linear-gradient(45deg, #4b1a7a, #c32e5b);
+    transform: scale(0.98);
+}

@@ -1,0 +1,32 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<h2>Dashboard</h2>
+<p>Tarefas Pendentes: {{ pending_tasks }}</p>
+<p>Tarefas em Andamento: {{ in_progress_tasks }}</p>
+<p>Tarefas Concluídas: {{ completed_tasks }}</p>
+
+<h3>Todas as Tarefas</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Status</th>
+            <th>Usuário</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>{{ task.get_status_display }}</td>
+            <td>{{ task.assigned_to.username }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Nenhuma tarefa encontrada.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
