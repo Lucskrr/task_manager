@@ -1,26 +1,21 @@
-/* static/css/styles.css */
-
-/* Estilos básicos para o corpo da página */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #e2e2e2, #f8f9fa); /* Gradiente sutil de fundo */
+    background: linear-gradient(to right, #e2e2e2, #f8f9fa);
     margin: 0;
     padding: 0;
 }
 
-/* Container principal para centralizar o conteúdo */
 .container {
     width: 90%;
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #ffffff; /* Cor de fundo mais suave para o container */
+    background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais suave e profunda */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para os formulários */
-form {
+form  {
     display: flex;
     flex-direction: column;
 }
@@ -57,7 +52,6 @@ form button:active {
     transform: scale(0.98);
 }
 
-/* Estilos para links */
 a {
     color: #007bff;
     text-decoration: none;
@@ -70,7 +64,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para a barra de navegação */
 .navbar {
     background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(40, 167, 69, 1) 100%);
 }
@@ -85,7 +78,6 @@ a:hover {
     color: #d3d3d3;
 }
 
-/* Estilos para botões adicionais */
 .btn-custom {
     background: linear-gradient(45deg, #6f42c1, #e83e8c);
     color: #fff;

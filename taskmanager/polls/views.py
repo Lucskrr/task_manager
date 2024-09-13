@@ -10,7 +10,6 @@ from django.contrib.auth import logout
 from django.shortcuts import redirect
 
 
-# Função para registrar novos usuários
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -23,13 +22,11 @@ def register(request):
         form = UserCreationForm()
     return render(request, 'tasks/register.html', {'form': form})
 
-# Função para listar as tarefas do usuário logado
 @login_required
 def task_list(request):
     tasks = Task.objects.filter(assigned_to=request.user)  # Filtra tarefas atribuídas ao usuário logado
     return render(request, 'tasks/task_list.html', {'tasks': tasks})
 
-# Função para criar uma nova tarefa
 @login_required
 def task_create(request):
     if request.method == 'POST':
@@ -44,7 +41,6 @@ def task_create(request):
         form = TaskForm()
     return render(request, 'tasks/task_form.html', {'form': form})
 
-# Função para editar uma tarefa existente
 @login_required
 def task_edit(request, pk):
     task = get_object_or_404(Task, pk=pk, assigned_to=request.user)  # Garante que apenas o dono da tarefa pode editá-la
@@ -58,7 +54,6 @@ def task_edit(request, pk):
         form = TaskForm(instance=task)
     return render(request, 'tasks/task_form.html', {'form': form})
 
-# Função para deletar uma tarefa
 @login_required
 def task_delete(request, pk):
     task = get_object_or_404(Task, pk=pk, assigned_to=request.user)
@@ -68,7 +63,6 @@ def task_delete(request, pk):
         return redirect('task-list')
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
 
-# Função para o dashboard que mostra todas as tarefas
 @login_required
 def dashboard(request):
     tasks = Task.objects.all()  # Exibe todas as tarefas no sistema
